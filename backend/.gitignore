@@ -1,0 +1,168 @@
+# Node.js Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment Variables (IMPORTANT!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging
+
+# Production Config Files
+config/production.js
+config/keys.js
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output (if using Next.js for API)
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Database files (if using local database)
+*.sqlite
+*.sqlite3
+*.db
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# SSL certificates (if any)
+*.pem
+*.key
+*.crt
+*.csr
+
+# Upload directories
+uploads/
+public/uploads/
+
+# Build outputs
+build/
+dist/
+
+# Docker
+.dockerignore
+Dockerfile.dev
+docker-compose.override.yml
+
+# Terraform (if using)
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# AWS (if using)
+.aws/
+
+# Heroku (if using)
+.heroku/
+
+# Vercel (if using for backend)
+.vercel
+
+# Local development files
+local.json
+.local
+
+# Test files
+test-results/
+coverage/
+
+# Backup files
+*.backup
+*.bak
+
+# Session files (if using file-based sessions)
+sessions/
+
+# Error screenshots (if any testing framework creates them)
+screenshots/
+test-screenshots/
+
+# Memory dumps
+*.heapsnapshot
+
+# API documentation build
+docs/build/
+
+# Local MongoDB data (if running locally)
+data/db/
+
+# Redis dump (if using Redis locally)
+dump.rdb
+
+# PM2 ecosystem file with sensitive data
+ecosystem.config.js
+
+# Miscellaneous
+.cache/
+.temp/
