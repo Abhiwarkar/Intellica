@@ -17,7 +17,6 @@ const auth = require('./routes/auth');
 const users = require('./routes/users');
 const analytics = require('./routes/analytics');
 const reports = require('./routes/reports');
-const settings = require('./routes/settings');
 
 const app = express();
 
@@ -27,9 +26,30 @@ app.use(express.json());
 // Set security headers
 app.use(helmet());
 
-// Enable CORS with correct configuration
+// CORS Configuration - FIXED
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:3000', 
+  'https://intellica-frontend.vercel.app',
+];
+
 app.use(cors({
-  origin: 'http://localhost:5173', // Frontend port
+  origin: function (origin, callback) {
+    // Allow requests with no origin 
+    if (!origin) return callback(null, true);
+    
+    // Check if the origin is in the allowed list
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      return callback(null, true);
+    }
+    
+    // Check if it's a vercel.app subdomain
+    if (origin.includes('.vercel.app')) {
+      return callback(null, true);
+    }
+    
+    return callback(new Error('Not allowed by CORS'));
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -38,7 +58,7 @@ app.use(cors({
 // Handle preflight requests
 app.options('*', cors());
 
-console.log('CORS configured for frontend on localhost:5173');
+console.log('CORS configured for multiple origins including Vercel deployment');
 
 // Dev logging middleware
 if (process.env.NODE_ENV === 'development') {
@@ -50,7 +70,6 @@ app.use('/api/auth', auth);
 app.use('/api/users', users);
 app.use('/api/analytics', analytics);
 app.use('/api/reports', reports);
-app.use('/api/settings', settings);
 
 // Health check route
 app.get('/', (req, res) => {
@@ -62,8 +81,7 @@ app.get('/', (req, res) => {
       auth: '/api/auth',
       users: '/api/users', 
       analytics: '/api/analytics',
-      reports: '/api/reports',
-      settings: '/api/settings'
+      reports: '/api/reports'
     }
   });
 });
