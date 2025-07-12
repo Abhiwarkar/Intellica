@@ -53,6 +53,28 @@ app.use('/api/reports', reports);
 app.use('/api/settings', settings);
 
 // Health check route
+app.get('/', (req, res) => {
+  res.status(200).json({ 
+    message: 'SaaS Analytics Intellica API is running successfully!',
+    status: 'online',
+    version: '1.0.0',
+    endpoints: {
+      auth: '/api/auth',
+      users: '/api/users', 
+      analytics: '/api/analytics',
+      reports: '/api/reports',
+      settings: '/api/settings'
+    }
+  });
+});
+
+app.get('/api', (req, res) => {
+  res.status(200).json({
+    message: 'API endpoints available',
+    version: '1.0.0'
+  });
+});
+
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
