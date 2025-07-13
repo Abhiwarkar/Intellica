@@ -69,8 +69,8 @@ Password-admin123
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/saas-bi-tool.git
-cd saas-bi-tool
+git clone https://github.com/Abhiwarkar/Intellica
+cd Intellica
 ```
 
 ### Backend Setup
@@ -94,7 +94,6 @@ Create a `.env` file in the backend directory:
 ```env
 NODE_ENV=development
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/saas-bi-tool
 JWT_SECRET=your_super_secret_jwt_key_here
 JWT_EXPIRE=30d
 ```
