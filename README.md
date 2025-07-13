@@ -160,7 +160,7 @@ Access the application at `http://localhost:5173`
 ```env
 NODE_ENV=production
 PORT=5000
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/saas-bi-tool
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/
 JWT_SECRET=your_production_jwt_secret
 JWT_EXPIRE=30d
 ```
