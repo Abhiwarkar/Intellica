@@ -5,6 +5,10 @@ A modern, full-stack SaaS business intelligence platform built with React and No
 Deployment-Frontend-https://intellica-frontend.vercel.app
 Deployment-Backend-https://intellica-backend.vercel.app/
 
+Sample Admin Credentials-
+Email-admin@gmail.com
+Password-admin123
+
 ## 🚀 Features
 
 ### Core Analytics
