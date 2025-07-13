@@ -2,6 +2,9 @@
 
 A modern, full-stack SaaS business intelligence platform built with React and Node.js. Track user behavior, analyze business metrics, and generate comprehensive reports for data-driven decision making.
 
+Deployment-Frontend-https://intellica-frontend.vercel.app
+Deployment-Backend-https://intellica-backend.vercel.app/
+
 ## 🚀 Features
 
 ### Core Analytics
