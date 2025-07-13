@@ -1,4 +1,4 @@
-# SaaS BI Tool - Business Intelligence Dashboard
+# Intellica-SaaS BI Tool - Business Intelligence Dashboard
 
 A modern, full-stack SaaS business intelligence platform built with React and Node.js. Track user behavior, analyze business metrics, and generate comprehensive reports for data-driven decision making.
 
